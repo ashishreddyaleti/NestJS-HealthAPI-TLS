@@ -31,7 +31,7 @@ pipeline{
         }
         stage('Remove Docker Image'){
             steps {
-                sh 'docker rmi reddyashishaleti/nestjs-tls'
+                sh 'docker rmi reddyashishaleti/nestjs-tls${BUILD_NUMBER}'
                 sh 'docker rmi registry.hub.docker.com/reddyashishaleti/nestjs-tls${BUILD_NUMBER}'
                     
 
