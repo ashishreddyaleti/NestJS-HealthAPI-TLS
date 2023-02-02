@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment {
-        dockerImagename = "reddyashishaleti/nestjs"
+        dockerImagename = "reddyashishaleti/nestjs-tls"
         appimage = ""
     }
     stages{
@@ -31,7 +31,7 @@ pipeline{
         }
         stage('Remove Docker Image'){
             steps {
-                sh 'docker rmi reddyashishaleti/nestjs${BUILD_NUMBER}'
+                sh 'docker rmi reddyashishaleti/nestjs-tls"$BUILD_NUMBER"
                     
 
             }
